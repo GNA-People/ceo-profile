@@ -149,17 +149,15 @@
   .alist .row2 b{color:var(--txt);font-weight:500;}
   .inv-foot{margin-top:18px;font-size:13px;color:var(--txt-dim);font-weight:300;}
 
-  /* 포트폴리오 로고 그리드 */
+  /* 포트폴리오 그리드 */
   .pf-wrap{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);}
   .pf-label{font-size:13px;letter-spacing:.04em;color:var(--txt-dim);margin-bottom:28px;font-weight:400;}
   .pf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .pf-grid .cell{background:var(--bg);display:flex;align-items:center;justify-content:center;
-    padding:24px 18px;min-height:96px;transition:background .3s;}
-  .pf-grid .cell:hover{background:var(--bg-2);}
-  .pf-grid .cell img{max-width:100%;max-height:48px;width:auto;height:auto;object-fit:contain;
-    filter:grayscale(100%) brightness(0) invert(1);opacity:.55;transition:opacity .3s;}
-  .pf-grid .cell:hover img{opacity:.9;}
-  .pf-grid .cell .txt{font-size:14px;font-weight:600;color:var(--txt-soft);letter-spacing:-.01em;text-align:center;}
+    padding:26px 14px;min-height:84px;text-align:center;
+    font-size:15px;font-weight:600;color:var(--txt-soft);letter-spacing:-.01em;
+    transition:color .3s,background .3s;}
+  .pf-grid .cell:hover{color:var(--txt);background:var(--bg-2);}
 
   footer{padding:40px 0;border-top:1px solid var(--line);}
   footer .wrap{font-size:12.5px;color:var(--txt-dim);letter-spacing:.02em;}
@@ -393,21 +391,21 @@
     <div class="pf-wrap">
       <p class="pf-label">Portfolio · 주요 투자 기업</p>
       <div class="pf-grid">
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/배달통.png" alt="배달통" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>배달통</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/에잇퍼센트.png" alt="에잇퍼센트" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>에잇퍼센트</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/와이오엘오.png" alt="와이오엘오" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>와이오엘오</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/zaricompany-1.png" alt="자리컴퍼니" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>자리컴퍼니</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_on_transparent_canvas_300px.png" alt="버틀러" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>버틀러</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/bean_brothers-removebg-preview.png" alt="에이블커피그룹" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>에이블커피그룹</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_70_percent_centered.png" alt="데이트립" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>데이트립</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_transparent.png" alt="스키아" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>스키아</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/로고몬도_코너스톤_배경없음.png" alt="로고몬도" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>로고몬도</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_v2-removebg-preview.png" alt="아들러" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>아들러</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_ct.png" alt="콘텐츠테크놀로지스" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>콘텐츠테크놀로지스</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_75_percent_centered.png" alt="네비스게임즈" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>네비스게임즈</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_180_percent_centered.png" alt="브이원씨" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>브이원씨</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/codmos_centered_canvas.png" alt="로지브라더스" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>로지브라더스</span>'"></div>
-        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/05/jobploy.png" alt="잡플로이" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>잡플로이</span>'"></div>
+        <div class="cell">배달통</div>
+        <div class="cell">에잇퍼센트</div>
+        <div class="cell">와이오엘오</div>
+        <div class="cell">자리컴퍼니</div>
+        <div class="cell">버틀러</div>
+        <div class="cell">에이블커피그룹</div>
+        <div class="cell">데이트립</div>
+        <div class="cell">스키아</div>
+        <div class="cell">로고몬도</div>
+        <div class="cell">아들러</div>
+        <div class="cell">콘텐츠테크놀로지스</div>
+        <div class="cell">네비스게임즈</div>
+        <div class="cell">브이원씨</div>
+        <div class="cell">로지브라더스</div>
+        <div class="cell">잡플로이</div>
       </div>
     </div>
   </section>
