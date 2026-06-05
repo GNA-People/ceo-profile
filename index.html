@@ -54,11 +54,11 @@
   .hero-id .nm{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--txt);letter-spacing:-.01em;line-height:1;}
   .hero-id .ro{margin-top:14px;font-size:15px;color:var(--txt-soft);font-weight:400;line-height:1.7;}
   .hero-id .ro b{color:var(--accent-bright);font-weight:600;}
-  .hero-track{display:flex;gap:0;border-left:1px solid var(--line-2);}
-  .hero-track .t{padding:0 24px;border-right:1px solid var(--line);text-align:center;}
-  .hero-track .t:last-child{border-right:none;}
+  .hero-track{display:flex;gap:0;}
+  .hero-track .t{padding:2px 28px;border-left:1px solid var(--line-2);text-align:left;}
+  .hero-track .t:first-child{padding-left:0;border-left:none;}
   .hero-track .t .y{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--txt);line-height:1;}
-  .hero-track .t .c{font-size:11px;color:var(--txt-dim);margin-top:8px;letter-spacing:.01em;}
+  .hero-track .t .c{font-size:11px;color:var(--txt-dim);margin-top:8px;letter-spacing:.01em;white-space:nowrap;}
   .hero-scroll{position:relative;z-index:2;padding:0 0 30px;}
   .hero-scroll .wrap{display:flex;justify-content:center;}
   .hero-scroll .cue{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-dim);display:flex;flex-direction:column;align-items:center;gap:10px;}
@@ -86,6 +86,7 @@
 
   .rows{border-top:1px solid var(--line-2);}
   .row{display:grid;grid-template-columns:140px 1fr;gap:36px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .rows .row:last-child{border-bottom:none;}
   .row .yr{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--accent-bright);}
   .row .yr span{display:block;font-size:12px;color:var(--txt-dim);font-weight:300;margin-top:3px;}
   .row .desc{font-size:16px;color:var(--txt);font-weight:500;}
@@ -93,6 +94,7 @@
 
   .svc-row{display:grid;grid-template-columns:140px 1fr;gap:36px;padding:28px 0;border-bottom:1px solid var(--line);}
   .svc-row:first-child{border-top:1px solid var(--line-2);}
+  .svc-list .svc-row:last-child{border-bottom:none;}
   .svc-row .yr{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent-bright);}
   .svc-row .body .nm{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--txt);margin-bottom:6px;}
   .svc-row .body p{font-size:14.5px;color:var(--txt-soft);font-weight:300;line-height:1.8;max-width:660px;}
@@ -105,7 +107,7 @@
   .now{background:var(--bg-2);border:1px solid var(--line-2);border-radius:4px;padding:44px 46px;margin-top:8px;}
   .now .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;}
   .now .nm{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--txt);letter-spacing:-.01em;}
-  .now .nm .slogan{font-size:15px;font-weight:400;color:var(--accent-bright);margin-left:14px;font-family:var(--sans);letter-spacing:.02em;}
+  .now .nm .slogan{display:block;font-size:16px;font-weight:400;color:var(--accent-bright);margin-top:12px;font-family:var(--sans);letter-spacing:.01em;line-height:1.6;}
   .now p{font-size:15px;color:var(--txt-soft);font-weight:300;line-height:1.85;margin-top:14px;max-width:720px;}
   .now p b{color:var(--txt);font-weight:500;}
   .now .feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
@@ -134,8 +136,9 @@
     .hero-lines{display:none;}
     .hero-topbar .wrap{padding:20px 26px;}
     .hero-meta{flex-direction:column;align-items:flex-start;}
-    .hero-track{border-left:none;border-top:1px solid var(--line-2);padding-top:20px;width:100%;flex-wrap:wrap;}
-    .hero-track .t{padding:8px 18px 8px 0;text-align:left;}
+    .hero-track{border-top:1px solid var(--line-2);padding-top:20px;width:100%;flex-wrap:wrap;gap:14px 0;}
+    .hero-track .t{padding:0 18px;}
+    .hero-track .t:first-child{padding-left:0;}
     .intro .wrap{grid-template-columns:1fr;gap:36px;}
     .intro-label{position:relative;top:0;}
     .row,.svc-row{grid-template-columns:1fr;gap:8px;}
@@ -187,7 +190,7 @@
     </div>
     <div class="intro-body">
       <p>
-        최지웅 대표는 인터넷·모바일 산업의 태동기부터 25년간
+        최지웅 대표는 인터넷·모바일 산업의 태동기부터 오늘의 AI 시대까지 25년간
         <b>시대를 앞서 읽는 통찰력으로 새로운 시장을 개척해 온 사업가</b>다.
       </p>
       <p>
@@ -198,8 +201,9 @@
         <b>시장이 형성되기 전에 진입해 표준을 만드는 혁신</b>을 거듭해 왔다.
       </p>
       <p>
-        현재는 지엔에이컴퍼니 대표이사로서 게임 엔터테인먼트 경험에 가치를 더하는 플레이타임 리워드 플랫폼 <b>'플레이오(Playio)'</b>를 이끌며,
-        한국·일본·대만 동북아 시장에서 <b>AI 기반 데이터 분석</b>을 더해 모바일에서 게임으로 다시 한번 새로운 시장을 열어가고 있다.
+        현재는 지엔에이컴퍼니 대표이사로서 <b>'플레이오(Playio)'</b>를 이끌며,
+        게이머의 가치를 쌓아 게임사와 연결하는 크로스 게임 플랫폼으로 다시 한번 새로운 시장을 열어가고 있다.
+        인터넷·모바일에 이어 <b>AI 시대에도 한발 앞서 시장을 만들어 가는 사업가</b>다.
         동시에 배달통·자리컴퍼니·컨텀캣 등 <b>30여 개 기업</b>에 투자해 다수의 성공적인 회수 실적을 거둔 엔젤 투자자이기도 하다.
       </p>
     </div>
@@ -216,7 +220,7 @@
       <div class="row">
         <div class="yr">현재</div>
         <div class="desc">지엔에이컴퍼니 대표이사
-          <span class="sub">게임 플레이타임 리워드 플랫폼 '플레이오(Playio)'를 운영하며, 모바일 게임 마케팅·UA 솔루션 사업을 이끎.</span>
+          <span class="sub">크로스 게임 플랫폼 '플레이오(Playio)'를 운영하며, 게이머의 가치를 쌓아 게임사와 연결하는 서비스를 이끎.</span>
         </div>
       </div>
       <div class="row">
@@ -231,31 +235,27 @@
   <!-- PLAYIO (현재 사업) -->
   <section class="sec">
     <h2 class="sec-title">현재 사업</h2>
-    <p class="sec-sub">Playio · 지엔에이컴퍼니</p>
+    <p class="sec-sub">Playio · 지엔에이컴퍼니 — Best Value for Gamer</p>
     <div class="now">
-      <div class="tag">Best Value for Gamers</div>
-      <div class="nm">플레이오(Playio) <span class="slogan">게임 엔터테인먼트 경험에 가치를 더하다</span></div>
+      <div class="tag">Best Value for Gamer</div>
+      <div class="nm">플레이오(Playio) <span class="slogan">게이머가 대우받는 세상으로, Best Value for Gamer</span></div>
       <p>
-        유저의 게임 플레이타임에 기반한 <b>플레이타임 리워드 플랫폼</b>으로,
-        한국·일본·대만 등 <b>동북아 시장을 대상으로 서비스</b>하고 있다.
-        사전예약·CBT·UA 등 게임 특성에 최적화된 <b>AI 기반 타겟팅 캠페인</b>을 운영하며,
-        리텐션·전환율·ROAS 등 광고주의 KPI에 맞춘 성과형 마케팅 솔루션을 제공하는 <b>동북아 대표 UA·마케팅 솔루션 플랫폼</b>이다.
+        플레이오는 <b>한국·일본·대만 동북아 시장</b>을 대상으로, 단일 게임사가 할 수 없는
+        <b>크로스 게임·플랫폼(Cross-Game/Platform)</b> 방식으로 게이머의 플레이 데이터를 모아
+        <b>'게이머 이력서(Resume)'</b>를 완성한다.
+        게이머의 플레이타임을 가치로 전환해 게임사와 직접 연결하고,
+        게임사에는 정교한 타겟 추천으로 더 정확한 유저 매칭을, 게이머에게는 더 큰 혜택을 제공하며
+        <b>게임 생태계의 선순환 구조</b>를 만든다. 이러한 초개인화 추천은 플레이오가 보유한 특허 기반의 Vertical AI 기술로 뒷받침된다.
       </p>
-      <div class="figs" style="display:flex;flex-wrap:wrap;gap:36px;margin-top:26px;">
-        <div class="fig" style="display:flex;flex-direction:column;">
-          <span class="v" style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--txt);line-height:1;">500만+</span>
-          <span class="k" style="font-size:12px;color:var(--txt-dim);margin-top:7px;">누적 다운로드</span>
-        </div>
-        <div class="fig" style="display:flex;flex-direction:column;">
-          <span class="v" style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--txt);line-height:1;">한국 · 일본 · 대만</span>
-          <span class="k" style="font-size:12px;color:var(--txt-dim);margin-top:7px;">동북아 서비스</span>
-        </div>
-      </div>
+      <p>
+        실제로 게임을 이탈한 유저 중 <b>84.06%</b>가 플레이오를 통해 다른 게임을 다시 시작할 만큼,
+        게이머가 머무는 플랫폼으로 자리 잡았다.
+      </p>
       <div class="feats">
-        <span>플레이타임 리워드</span>
-        <span>AI 기반 타겟팅</span>
-        <span>사전예약 · CBT · UA</span>
-        <span>리텐션 · 전환율 · ROAS</span>
+        <span>Cross-Game / Platform</span>
+        <span>게이머 Resume</span>
+        <span>초개인화 추천 (Vertical AI)</span>
+        <span>NC · 넥슨 · 네오위즈 파트너십</span>
       </div>
     </div>
   </section>
