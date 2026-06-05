@@ -25,7 +25,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
     --bg:#0f141b;
@@ -37,8 +37,8 @@
     --txt-dim:#5e6878;
     --accent:#8aa4c4;
     --accent-bright:#b3c8e2;
-    --serif:"Noto Serif KR",serif;
-    --sans:"Noto Sans KR",sans-serif;
+    --serif:"Pretendard",sans-serif;
+    --sans:"Pretendard",sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -149,6 +149,18 @@
   .alist .row2 b{color:var(--txt);font-weight:500;}
   .inv-foot{margin-top:18px;font-size:13px;color:var(--txt-dim);font-weight:300;}
 
+  /* 포트폴리오 로고 그리드 */
+  .pf-wrap{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);}
+  .pf-label{font-size:13px;letter-spacing:.04em;color:var(--txt-dim);margin-bottom:28px;font-weight:400;}
+  .pf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .pf-grid .cell{background:var(--bg);display:flex;align-items:center;justify-content:center;
+    padding:24px 18px;min-height:96px;transition:background .3s;}
+  .pf-grid .cell:hover{background:var(--bg-2);}
+  .pf-grid .cell img{max-width:100%;max-height:48px;width:auto;height:auto;object-fit:contain;
+    filter:grayscale(100%) brightness(0) invert(1);opacity:.55;transition:opacity .3s;}
+  .pf-grid .cell:hover img{opacity:.9;}
+  .pf-grid .cell .txt{font-size:14px;font-weight:600;color:var(--txt-soft);letter-spacing:-.01em;text-align:center;}
+
   footer{padding:40px 0;border-top:1px solid var(--line);}
   footer .wrap{font-size:12.5px;color:var(--txt-dim);letter-spacing:.02em;}
 
@@ -170,6 +182,8 @@
     .row,.svc-row{grid-template-columns:1fr;gap:8px;}
     .now{padding:32px 26px;}
     .inv-grid{grid-template-columns:1fr;gap:40px;}
+    .pf-grid{grid-template-columns:repeat(3,1fr);}
+    .pf-grid .cell{font-size:13px;padding:20px 8px;min-height:68px;}
   }
 </style>
 </head>
@@ -182,20 +196,14 @@
     <div class="wrap hero-inner">
       <h1 class="hero-headline">
         <span class="lead-line">모바일 시대부터 AI 시대까지,</span>
-        <span class="hl">새로운 시장을 만들어&nbsp;온 사업가</span>
+        <span class="hl">새로운 시장을 만들어 온 기업가이자 투자자</span>
       </h1>
       <div class="hero-meta">
         <div class="hero-id">
           <div class="nm">최지웅</div>
           <div class="ro">
-            <b>지엔에이컴퍼니 대표이사</b><br>
-            지온네트웍스(현 모자익) 창업자 · 아크 대표이사 역임 · 엔젤 투자자
+            연쇄창업가 · 엔젤투자자
           </div>
-        </div>
-        <div class="hero-track">
-          <div class="t"><div class="y">2000</div><div class="c">모바일 솔루션</div></div>
-          <div class="t"><div class="y">2004</div><div class="c">모바일 포털</div></div>
-          <div class="t"><div class="y">현재</div><div class="c">게임 · AI</div></div>
         </div>
       </div>
     </div>
@@ -215,21 +223,25 @@
     </div>
     <div class="intro-body">
       <p>
-        최지웅 대표는 인터넷·모바일 산업의 태동기부터 오늘의 AI 시대까지 25년간
-        <b>시대를 앞서 읽는 통찰력으로 새로운 시장을 개척해 온 사업가</b>다.
+        <b>기업가이자 투자자</b>인 최지웅 대표는 인터넷·모바일 산업의 태동기부터 AI 시대에 이르기까지
+        25년간 새로운 기회를 발굴하고 성장시켜 왔다.
       </p>
       <p>
-        2000년 지온네트웍스를 설립해 휴대폰 데이터 이관 솔루션 '모비고'로
-        <span class="em">대한민국 휴대폰 교체자의 40% 이상이 거쳐 가는 국민 서비스</span>를 만들었고,
-        텔킷·모비셀로 이어지는 풀라인업으로 휴대폰 유통 솔루션 시장에서 <span class="em">점유율 90%의 독보적 1위</span>를 구축했다.
-        그룹사 모키(레디벅)를 통해서는 회원 610만 명의 국내 No.1 모바일 포털을 키워내며
-        <b>시장이 형성되기 전에 진입해 표준을 만드는 혁신</b>을 거듭해 왔다.
+        2000년 지온네트웍스를 설립한 최지웅 대표는 이기종 간 휴대폰 데이터 전송 솔루션 <b>'모비고'</b>를 시작으로,
+        휴대폰 유통시장의 재고 관리부터 가격 계산까지 지원하는 <b>'텔킷'</b>, <b>'모비셀'</b>을 잇달아 선보이며
+        휴대폰 대리점·판매점 시장 <span class="em">점유율 98%</span>를 기록하는 독보적인 1위 서비스로 성장시켰다.
       </p>
       <p>
-        현재는 지엔에이컴퍼니 대표이사로서 게임 플랫폼 <b>'플레이오(Playio)'</b>를 이끌며,
-        한국·일본·대만 등 <b>글로벌 시장</b>을 무대로 다시 한번 새로운 시장을 열어가고 있다.
-        인터넷·모바일에 이어 <b>AI 시대에도 한발 앞서 시장을 만들어 가는 사업가</b>다.
-        동시에 배달통·자리컴퍼니·컨텀캣 등 <b>30여 개 기업</b>에 투자해 다수의 성공적인 회수 실적을 거둔 엔젤 투자자이기도 하다.
+        2004년에는 모바일 콘텐츠 기업 모키를 설립해 벨소리, SMS, 배경화면 등의 서비스를 제공하며
+        <span class="em">회원 610만 명</span> 규모의 국내 대표 모바일 포털로 성장시켰다.
+        이후 레디벅으로 사명을 바꾸어 스마트폰 전환기에 시장 변화와 이용자 수요를 빠르게 포착해,
+        앱 배포는 물론 무료배경화면(일일 PV 1,200만), 책속의 한줄(일간 공유 15만 건), 메모G 등
+        다양한 모바일 서비스를 출시하며 지속적인 혁신을 이어갔다.
+      </p>
+      <p>
+        이러한 사업 경험과 시장에 대한 통찰을 바탕으로 창업 초기부터 유망 스타트업에 대한 투자도 꾸준히 이어왔다.
+        배달통·자리컴퍼니·컨텀캣 등 <b>30여 개 기업</b>에 투자하며, 단순한 자본 제공을 넘어 사업 경험과 노하우를 공유하고
+        기업의 성장과 성공적인 EXIT까지 함께하는 <b>엔젤 투자자</b>로 활동하고 있다.
       </p>
     </div>
   </div>
@@ -244,14 +256,26 @@
     <div class="rows">
       <div class="row">
         <div class="yr">현재</div>
-        <div class="desc">지엔에이컴퍼니 대표이사
+        <div class="desc">지엔에이컴퍼니 공동창업자
           <span class="sub">게이머의 가치를 쌓아 게임사와 연결하는 게임 리워드 플랫폼 '플레이오(Playio)'를 한국·일본·대만 등 동북아 시장에서 글로벌 서비스로 운영 중.</span>
         </div>
       </div>
       <div class="row">
-        <div class="yr">2000<span>창업</span></div>
-        <div class="desc">지온네트웍스(현 모자익) 창업자
-          <span class="sub">휴대폰 대리점·판매점을 위한 데이터 이관 솔루션 모비고를 개발해 전국 25,000개 판매점이 사용하는 업계 1위 서비스로 성장시킴. 2017년 사명을 아크로 변경한 뒤 대표이사로서 모비고·텔킷·모비셀·이레이저 등 휴대폰 데이터 전송·유통 솔루션 사업을 총괄(2018년 모자익과 아크 분할). 그룹사 모키(레디벅)를 통해 모바일 포털·SNS 사업으로 영역을 확장.</span>
+        <div class="yr">현재</div>
+        <div class="desc">모자익(MOSAIC)
+          <span class="sub">전문 엔젤투자사 모자익을 통해 초기 스타트업에 투자하며, 자본을 넘어 선배 창업자의 경험과 네트워크를 함께 제공. 배달통·에잇퍼센트·와이오엘오·자리컴퍼니 등을 포트폴리오로 보유.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yr">2004<span>설립</span></div>
+        <div class="desc">모키 → 레디벅 설립
+          <span class="sub">벨소리·SMS·배경화면 등을 제공하는 모바일 콘텐츠 기업 모키를 설립, 회원 610만 명 규모의 국내 대표 모바일 포털로 성장시킴. 이후 레디벅으로 사명을 변경하고 무료배경화면·책속의 한줄·메모G 등 다양한 모바일 서비스를 선보임.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yr">2000<span>설립</span></div>
+        <div class="desc">지온네트웍스 설립
+          <span class="sub">이기종 간 휴대폰 데이터 전송 솔루션 '모비고'를 시작으로 재고관리 '텔킷', 가격계산 '모비셀'까지 휴대폰 유통 시장의 필수 솔루션을 구축, 시장 점유율 98%의 독보적 1위 서비스로 성장시킴.</span>
         </div>
       </div>
     </div>
@@ -365,12 +389,33 @@
         <p class="inv-foot">* 주요 Exit 외 다수 포함. 현 투자사 모자익을 통해 활동.</p>
       </div>
     </div>
+
+    <div class="pf-wrap">
+      <p class="pf-label">Portfolio · 주요 투자 기업</p>
+      <div class="pf-grid">
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/배달통.png" alt="배달통" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>배달통</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/에잇퍼센트.png" alt="에잇퍼센트" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>에잇퍼센트</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/와이오엘오.png" alt="와이오엘오" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>와이오엘오</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/zaricompany-1.png" alt="자리컴퍼니" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>자리컴퍼니</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_on_transparent_canvas_300px.png" alt="버틀러" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>버틀러</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/bean_brothers-removebg-preview.png" alt="에이블커피그룹" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>에이블커피그룹</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_70_percent_centered.png" alt="데이트립" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>데이트립</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_transparent.png" alt="스키아" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>스키아</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/07/로고몬도_코너스톤_배경없음.png" alt="로고몬도" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>로고몬도</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_v2-removebg-preview.png" alt="아들러" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>아들러</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_centered_500x500_ct.png" alt="콘텐츠테크놀로지스" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>콘텐츠테크놀로지스</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_75_percent_centered.png" alt="네비스게임즈" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>네비스게임즈</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/image_resized_180_percent_centered.png" alt="브이원씨" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>브이원씨</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/08/codmos_centered_canvas.png" alt="로지브라더스" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>로지브라더스</span>'"></div>
+        <div class="cell"><img src="https://mosaic.kr/wp-content/uploads/2024/05/jobploy.png" alt="잡플로이" loading="lazy" onerror="this.parentNode.innerHTML='<span class=\&quot;txt\&quot;>잡플로이</span>'"></div>
+      </div>
+    </div>
   </section>
 
 </div>
 
 <footer>
-  <div class="wrap">최지웅 · 지엔에이컴퍼니 대표이사 &nbsp;|&nbsp; 지온네트웍스 · 아크 · 모키(레디벅) · 플레이오</div>
+  <div class="wrap">최지웅 · 지엔에이컴퍼니 공동창업자 &nbsp;|&nbsp; 지온네트웍스 · 모키 · 레디벅 · 플레이오</div>
 </footer>
 
 </body>
