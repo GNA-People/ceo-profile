@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>최지웅 CEO 소개</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f141b;
+    --bg-2:#151c25;
+    --line:rgba(255,255,255,.08);
+    --line-2:rgba(255,255,255,.15);
+    --txt:#e9edf2;
+    --txt-soft:#9aa6b3;
+    --txt-dim:#5e6878;
+    --accent:#8aa4c4;
+    --accent-bright:#b3c8e2;
+    --serif:"Noto Serif KR",serif;
+    --sans:"Noto Sans KR",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--accent);color:var(--bg);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 56px;}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 25%, rgba(138,164,196,.13), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 15% 90%, rgba(138,164,196,.07), transparent 55%),
+      var(--bg);}
+  .hero-lines{position:absolute;inset:0;opacity:.4;z-index:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 8vh;
+    -webkit-mask-image:linear-gradient(transparent,black 25%,black 70%,transparent);
+    mask-image:linear-gradient(transparent,black 25%,black 70%,transparent);}
+  .hero-topbar{position:relative;z-index:2;border-bottom:1px solid var(--line);}
+  .hero-topbar .wrap{padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+  .hero-topbar .crumb{font-size:13px;letter-spacing:.04em;color:var(--txt-soft);}
+  .hero-topbar .crumb b{color:var(--accent-bright);font-weight:600;}
+  .hero-topbar .label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-dim);}
+  .hero-main{flex:1;display:flex;align-items:center;position:relative;z-index:2;padding-top:40px;}
+  .hero-inner{width:100%;}
+  .hero-eyebrow{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:34px;
+    display:flex;align-items:center;gap:16px;}
+  .hero-eyebrow::before{content:"";width:44px;height:1px;background:var(--accent);}
+  .hero-headline{font-family:var(--serif);font-weight:700;font-size:clamp(36px,6vw,76px);line-height:1.18;letter-spacing:-.025em;color:var(--txt);}
+  .hero-headline .hl{color:var(--accent-bright);}
+  .hero-headline .thin{font-weight:400;color:var(--txt-soft);}
+  .hero-meta{margin-top:54px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+  .hero-id .nm{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--txt);letter-spacing:-.01em;line-height:1;}
+  .hero-id .ro{margin-top:14px;font-size:15px;color:var(--txt-soft);font-weight:400;line-height:1.7;}
+  .hero-id .ro b{color:var(--accent-bright);font-weight:600;}
+  .hero-track{display:flex;gap:0;border-left:1px solid var(--line-2);}
+  .hero-track .t{padding:0 24px;border-right:1px solid var(--line);text-align:center;}
+  .hero-track .t:last-child{border-right:none;}
+  .hero-track .t .y{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--txt);line-height:1;}
+  .hero-track .t .c{font-size:11px;color:var(--txt-dim);margin-top:8px;letter-spacing:.01em;}
+  .hero-scroll{position:relative;z-index:2;padding:0 0 30px;}
+  .hero-scroll .wrap{display:flex;justify-content:center;}
+  .hero-scroll .cue{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-dim);display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .hero-scroll .bar{width:1px;height:40px;background:var(--line-2);position:relative;overflow:hidden;}
+  .hero-scroll .bar::after{content:"";position:absolute;top:0;left:0;width:100%;height:40%;background:var(--accent);animation:drop 2.2s infinite;}
+  @keyframes drop{0%{transform:translateY(-100%);}100%{transform:translateY(250%);}}
+
+  /* INTRO */
+  .intro{padding:104px 0;border-bottom:1px solid var(--line);background:var(--bg-2);}
+  .intro .wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;}
+  .intro-label{position:sticky;top:48px;}
+  .intro-label .t{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--txt);}
+  .intro-label .s{font-size:13px;color:var(--txt-dim);margin-top:8px;letter-spacing:.04em;}
+  .intro-label .accent{width:42px;height:3px;background:var(--accent);margin-top:24px;opacity:.7;}
+  .intro-body p{font-family:var(--serif);font-size:clamp(18px,2.05vw,22px);line-height:1.85;color:var(--txt);font-weight:400;margin-bottom:30px;letter-spacing:-.005em;}
+  .intro-body p:last-child{margin-bottom:0;}
+  .intro-body p b{color:var(--accent-bright);font-weight:600;}
+  .intro-body .em{color:var(--txt);font-weight:600;}
+
+  /* SECTION */
+  .sec{padding:88px 0;border-bottom:1px solid var(--line);}
+  .sec:last-of-type{border-bottom:none;}
+  .sec-title{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--txt);margin-bottom:8px;letter-spacing:-.01em;}
+  .sec-sub{font-size:14px;color:var(--txt-dim);margin-bottom:48px;font-weight:300;}
+
+  .rows{border-top:1px solid var(--line-2);}
+  .row{display:grid;grid-template-columns:140px 1fr;gap:36px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .row .yr{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--accent-bright);}
+  .row .yr span{display:block;font-size:12px;color:var(--txt-dim);font-weight:300;margin-top:3px;}
+  .row .desc{font-size:16px;color:var(--txt);font-weight:500;}
+  .row .desc .sub{display:block;font-size:14px;color:var(--txt-soft);font-weight:300;margin-top:6px;line-height:1.78;max-width:680px;}
+
+  .svc-row{display:grid;grid-template-columns:140px 1fr;gap:36px;padding:28px 0;border-bottom:1px solid var(--line);}
+  .svc-row:first-child{border-top:1px solid var(--line-2);}
+  .svc-row .yr{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent-bright);}
+  .svc-row .body .nm{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--txt);margin-bottom:6px;}
+  .svc-row .body p{font-size:14.5px;color:var(--txt-soft);font-weight:300;line-height:1.8;max-width:660px;}
+  .svc-row .body .figs{display:flex;flex-wrap:wrap;gap:24px;margin-top:14px;}
+  .svc-row .body .fig{display:flex;flex-direction:column;}
+  .svc-row .body .fig .v{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--txt);line-height:1;}
+  .svc-row .body .fig .k{font-size:12px;color:var(--txt-dim);margin-top:6px;font-weight:300;}
+
+  /* PLAYIO highlight */
+  .now{background:var(--bg-2);border:1px solid var(--line-2);border-radius:4px;padding:44px 46px;margin-top:8px;}
+  .now .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px;}
+  .now .nm{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--txt);letter-spacing:-.01em;}
+  .now .nm .slogan{font-size:15px;font-weight:400;color:var(--accent-bright);margin-left:14px;font-family:var(--sans);letter-spacing:.02em;}
+  .now p{font-size:15px;color:var(--txt-soft);font-weight:300;line-height:1.85;margin-top:14px;max-width:720px;}
+  .now p b{color:var(--txt);font-weight:500;}
+  .now .feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+  .now .feats span{font-size:12.5px;color:var(--txt-soft);border:1px solid var(--line-2);padding:6px 13px;border-radius:40px;}
+
+  .inv-lede{font-size:16px;color:var(--txt-soft);line-height:1.95;font-weight:300;max-width:800px;margin-bottom:44px;}
+  .inv-lede b{color:var(--txt);font-weight:500;}
+  .inv-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .exits{width:100%;border-collapse:collapse;}
+  .exits caption{font-size:13px;letter-spacing:.02em;color:var(--txt-dim);text-align:left;padding-bottom:16px;border-bottom:1px solid var(--line-2);font-weight:400;}
+  .exits td{padding:16px 0;border-bottom:1px solid var(--line);}
+  .exits .e{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--txt);}
+  .exits .r{text-align:right;font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent-bright);}
+  .exits .r.m{font-size:13px;font-weight:400;color:var(--txt-dim);font-family:var(--sans);}
+  .alist{display:flex;flex-direction:column;}
+  .alist .row2{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--txt-soft);font-weight:300;}
+  .alist .row2:first-child{border-top:1px solid var(--line-2);}
+  .alist .row2 b{color:var(--txt);font-weight:500;}
+  .inv-foot{margin-top:18px;font-size:13px;color:var(--txt-dim);font-weight:300;}
+
+  footer{padding:40px 0;border-top:1px solid var(--line);}
+  footer .wrap{font-size:12.5px;color:var(--txt-dim);letter-spacing:.02em;}
+
+  @media(max-width:880px){
+    .wrap{padding:0 26px;}
+    .hero-topbar .wrap{padding:20px 26px;}
+    .hero-meta{flex-direction:column;align-items:flex-start;}
+    .hero-track{border-left:none;border-top:1px solid var(--line-2);padding-top:20px;width:100%;flex-wrap:wrap;}
+    .hero-track .t{padding:8px 18px 8px 0;text-align:left;}
+    .intro .wrap{grid-template-columns:1fr;gap:36px;}
+    .intro-label{position:relative;top:0;}
+    .row,.svc-row{grid-template-columns:1fr;gap:8px;}
+    .now{padding:32px 26px;}
+    .inv-grid{grid-template-columns:1fr;gap:40px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-lines"></div>
+  <div class="hero-main">
+    <div class="wrap hero-inner">
+      <h1 class="hero-headline">
+        시대를 앞서 읽고,<br>
+        <span class="hl">새로운 시장을 만들어 온</span><br>
+        <span class="thin">25년의 사업가</span>
+      </h1>
+      <div class="hero-meta">
+        <div class="hero-id">
+          <div class="nm">최지웅</div>
+          <div class="ro">
+            <b>지엔에이컴퍼니 대표이사</b><br>
+            지온네트웍스(현 모자익) 창업자 · 아크 대표이사 역임 · 엔젤 투자자
+          </div>
+        </div>
+        <div class="hero-track">
+          <div class="t"><div class="y">2000</div><div class="c">모바일 솔루션</div></div>
+          <div class="t"><div class="y">2004</div><div class="c">모바일 포털</div></div>
+          <div class="t"><div class="y">현재</div><div class="c">게임 · AI</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="wrap"><div class="cue"><span>Scroll</span><div class="bar"></div></div></div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-label">
+      <div class="t">프로필</div>
+      <div class="s">Profile</div>
+      <div class="accent"></div>
+    </div>
+    <div class="intro-body">
+      <p>
+        최지웅 대표는 인터넷·모바일 산업의 태동기부터 25년간
+        <b>시대를 앞서 읽는 통찰력으로 새로운 시장을 개척해 온 사업가</b>다.
+      </p>
+      <p>
+        2000년 지온네트웍스를 설립해 휴대폰 데이터 이관 솔루션 '모비고'로
+        <span class="em">대한민국 휴대폰 교체자의 40% 이상이 거쳐 가는 국민 서비스</span>를 만들었고,
+        텔킷·모비셀로 이어지는 풀라인업으로 휴대폰 유통 솔루션 시장에서 <span class="em">점유율 90%의 독보적 1위</span>를 구축했다.
+        그룹사 모키(레디벅)를 통해서는 회원 610만 명의 국내 No.1 모바일 포털을 키워내며
+        <b>시장이 형성되기 전에 진입해 표준을 만드는 혁신</b>을 거듭해 왔다.
+      </p>
+      <p>
+        현재는 지엔에이컴퍼니 대표이사로서 게임 엔터테인먼트 경험에 가치를 더하는 플레이타임 리워드 플랫폼 <b>'플레이오(Playio)'</b>를 이끌며,
+        한국·일본·대만 동북아 시장에서 <b>AI 기반 데이터 분석</b>을 더해 모바일에서 게임으로 다시 한번 새로운 시장을 열어가고 있다.
+        동시에 배달통·자리컴퍼니·컨텀캣 등 <b>30여 개 기업</b>에 투자해 다수의 성공적인 회수 실적을 거둔 엔젤 투자자이기도 하다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <!-- CAREER -->
+  <section class="sec">
+    <h2 class="sec-title">주요 경력</h2>
+    <p class="sec-sub">Career</p>
+    <div class="rows">
+      <div class="row">
+        <div class="yr">현재</div>
+        <div class="desc">지엔에이컴퍼니 대표이사
+          <span class="sub">게임 플레이타임 리워드 플랫폼 '플레이오(Playio)'를 운영하며, 모바일 게임 마케팅·UA 솔루션 사업을 이끎.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yr">2000<span>창업</span></div>
+        <div class="desc">지온네트웍스(현 모자익) 창업자
+          <span class="sub">휴대폰 대리점·판매점을 위한 데이터 이관 솔루션 모비고를 개발해 전국 25,000개 판매점이 사용하는 업계 1위 서비스로 성장시킴. 2017년 사명을 아크로 변경한 뒤 대표이사로서 모비고·텔킷·모비셀·이레이저 등 휴대폰 데이터 전송·유통 솔루션 사업을 총괄(2018년 모자익과 아크 분할). 그룹사 모키(레디벅)를 통해 모바일 포털·SNS 사업으로 영역을 확장.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYIO (현재 사업) -->
+  <section class="sec">
+    <h2 class="sec-title">현재 사업</h2>
+    <p class="sec-sub">Playio · 지엔에이컴퍼니</p>
+    <div class="now">
+      <div class="tag">Best Value for Gamers</div>
+      <div class="nm">플레이오(Playio) <span class="slogan">게임 엔터테인먼트 경험에 가치를 더하다</span></div>
+      <p>
+        유저의 게임 플레이타임에 기반한 <b>플레이타임 리워드 플랫폼</b>으로,
+        한국·일본·대만 등 <b>동북아 시장을 대상으로 서비스</b>하고 있다.
+        사전예약·CBT·UA 등 게임 특성에 최적화된 <b>AI 기반 타겟팅 캠페인</b>을 운영하며,
+        리텐션·전환율·ROAS 등 광고주의 KPI에 맞춘 성과형 마케팅 솔루션을 제공하는 <b>동북아 대표 UA·마케팅 솔루션 플랫폼</b>이다.
+      </p>
+      <div class="figs" style="display:flex;flex-wrap:wrap;gap:36px;margin-top:26px;">
+        <div class="fig" style="display:flex;flex-direction:column;">
+          <span class="v" style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--txt);line-height:1;">500만+</span>
+          <span class="k" style="font-size:12px;color:var(--txt-dim);margin-top:7px;">누적 다운로드</span>
+        </div>
+        <div class="fig" style="display:flex;flex-direction:column;">
+          <span class="v" style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--txt);line-height:1;">한국 · 일본 · 대만</span>
+          <span class="k" style="font-size:12px;color:var(--txt-dim);margin-top:7px;">동북아 서비스</span>
+        </div>
+      </div>
+      <div class="feats">
+        <span>플레이타임 리워드</span>
+        <span>AI 기반 타겟팅</span>
+        <span>사전예약 · CBT · UA</span>
+        <span>리텐션 · 전환율 · ROAS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec">
+    <h2 class="sec-title">주요 성공 사업</h2>
+    <p class="sec-sub">Ventures &amp; Services</p>
+    <div class="svc-list">
+      <div class="svc-row">
+        <div class="yr">2000</div>
+        <div class="body">
+          <div class="nm">모비고 · 텔킷 · 모비셀</div>
+          <p>휴대폰 이기종 간 데이터 이관 솔루션 '모비고'를 중심으로, 재고관리(텔킷)와 요금 계산·개통서류 출력(모비셀)까지. 전국 25,000개 판매점·10만 유통 종사자가 사용하는 업계 1위 솔루션 풀라인업을 구축했다.</p>
+          <div class="figs">
+            <div class="fig"><span class="v">90%</span><span class="k">시장 점유율</span></div>
+            <div class="fig"><span class="v">42%+</span><span class="k">휴대폰 교체자 이용률</span></div>
+            <div class="fig"><span class="v">25,000개</span><span class="k">전국 판매점</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="yr">2006</div>
+        <div class="body">
+          <div class="nm">모키 <span style="font-size:13px;font-weight:400;color:var(--txt-dim);">그룹사 · 레디벅</span></div>
+          <p>벨소리·배경화면·SMS 등 폰 안의 모든 정보와 서비스를 한데 모은 모바일 포털. 콘텐츠 보유량 국내 최대 규모로 국내 No.1 채널로 성장했다.</p>
+          <div class="figs">
+            <div class="fig"><span class="v">610만</span><span class="k">회원</span></div>
+            <div class="fig"><span class="v">17만</span><span class="k">DAU</span></div>
+            <div class="fig"><span class="v">60만건</span><span class="k">일평균 다운로드</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="yr">2007</div>
+        <div class="body">
+          <div class="nm">무료배경화면</div>
+          <p>스마트폰 배경화면 앱으로, UCC 배경화면 170만 개를 돌파하며 대표 배경화면 서비스로 자리 잡았다.</p>
+          <div class="figs">
+            <div class="fig"><span class="v">170만</span><span class="k">UCC 배경화면</span></div>
+            <div class="fig"><span class="v">1,200만</span><span class="k">일 PV</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="yr">2012</div>
+        <div class="body">
+          <div class="nm">책속의 한줄</div>
+          <p>마음을 움직인 한 줄을 공유하는 책 SNS. 누적 다운로드 50만 건, 월간 공유수 15만 건을 기록한 인기 서비스로 예스24와 제휴했다.</p>
+          <div class="figs">
+            <div class="fig"><span class="v">50만</span><span class="k">누적 다운로드</span></div>
+            <div class="fig"><span class="v">15만건</span><span class="k">월간 공유수</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTMENT -->
+  <section class="sec">
+    <h2 class="sec-title">투자 활동</h2>
+    <p class="sec-sub">Investments</p>
+    <p class="inv-lede">
+      2000년 지온네트웍스 설립 이후 초기 성장 가능성이 있는 기업을 직접 발굴·투자해 왔으며,
+      현재 투자사 <b>모자익</b>을 통해 엔젤 투자 활동을 이어오고 있다. <b>배달통·8퍼센트·와이오엘오·컨텀캣·자리컴퍼니</b> 등
+      <b>30개 이상</b>의 기업에 투자했다.
+    </p>
+    <div class="inv-grid">
+      <table class="exits">
+        <caption>주요 회수 성과 · Exit</caption>
+        <tr><td class="e">배달통</td><td class="r">13배</td></tr>
+        <tr><td class="e">자리컴퍼니</td><td class="r">10배</td></tr>
+        <tr><td class="e">컨텀캣</td><td class="r">3배</td></tr>
+        <tr><td class="e">8퍼센트 · 와이오엘오 외</td><td class="r m">투자 진행</td></tr>
+      </table>
+      <div>
+        <div class="alist">
+          <div class="row2"><span>엔젤 / 시드 투자</span><b>30개 이상</b></div>
+          <div class="row2"><span>주요 Exit</span><b>배달통 · 자리컴퍼니 · 컨텀캣</b></div>
+          <div class="row2"><span>투자 분야</span><b>모바일 · 핀테크 · 플랫폼</b></div>
+          <div class="row2"><span>투자 기간</span><b>2000 – 현재</b></div>
+        </div>
+        <p class="inv-foot">* 주요 Exit 외 다수 포함. 현 투자사 모자익을 통해 활동.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">최지웅 · 지엔에이컴퍼니 대표이사 &nbsp;|&nbsp; 지온네트웍스 · 아크 · 모키(레디벅) · 플레이오</div>
+</footer>
+
+</body>
+</html>
