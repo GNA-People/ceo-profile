@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>최지웅 CEO 소개</title>
 <meta name="description" content="모바일 시대부터 AI 시대까지 새로운 시장을 만들어 온 기업가이자 투자자. 지온네트웍스·모키·플레이오 창업, 30여 개 기업 투자.">
-
-<!-- Open Graph (카카오톡·페이스북·링크드인 미리보기) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="최지웅 CEO | 모바일 시대부터 AI 시대까지 새로운 시장을 만들어 온 기업가이자 투자자">
 <meta property="og:description" content="연쇄창업가이자 엔젤투자자. 지온네트웍스·모키·레디벅·플레이오.">
@@ -15,13 +13,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="GNA Company">
 <meta property="og:locale" content="ko_KR">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="최지웅 CEO | 모바일 시대부터 AI 시대까지 새로운 시장을 만들어 온 기업가이자 투자자">
 <meta name="twitter:description" content="연쇄창업가이자 엔젤투자자. 지온네트웍스·모키·레디벅·플레이오.">
 <meta name="twitter:image" content="og-image.png">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   :root{
@@ -31,9 +26,9 @@
     --ink-soft:#64605a;
     --ink-dim:#a39e94;
     --line:#e6e2da;
-    --accent:#3b5bdb;        /* 생동감 포인트 (블루) */
-    --accent-2:#7a5cff;      /* 보조 포인트 */
-    --gold:#9c7a3c;          /* 점잖은 포인트 */
+    --accent:#3b5bdb;
+    --accent-2:#7a5cff;
+    --gold:#9c7a3c;
     --serif:"Pretendard",sans-serif;
     --sans:"Pretendard",sans-serif;
   }
@@ -41,9 +36,7 @@
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.9;-webkit-font-smoothing:antialiased;}
   ::selection{background:var(--accent);color:#fff;}
-  .wrap{max-width:960px;margin:0 auto;padding:0 40px;}
-
-  /* NAV */
+  .wrap{max-width:1240px;margin:0 auto;padding:0 56px;}
   .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
     padding:18px 40px;background:rgba(248,246,242,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:padding .3s;}
   .nav .logo{font-family:var(--serif);font-size:18px;font-weight:700;letter-spacing:.02em;}
@@ -52,56 +45,44 @@
   .nav ul a{position:relative;color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;padding:8px 15px;border-radius:8px;transition:color .2s,background .2s;}
   .nav ul a:hover{color:var(--accent);background:rgba(59,91,219,.07);}
   .nav-toggle{display:none;background:none;border:none;color:var(--ink);font-size:22px;cursor:pointer;}
-
-  /* HERO */
-  .hero{padding:160px 0 110px;text-align:center;position:relative;overflow:hidden;}
+  .hero{padding:170px 0 120px;text-align:left;position:relative;overflow:hidden;}
   .hero .glow{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(90px);opacity:.16;z-index:0;}
-  .hero .glow.a{background:var(--accent);top:-120px;left:50%;transform:translateX(-60%);}
+  .hero .glow.a{background:var(--accent);top:-120px;left:18%;}
   .hero .glow.b{background:var(--accent-2);top:40px;right:8%;width:300px;height:300px;opacity:.12;}
   .hero .wrap{position:relative;z-index:1;}
-  .hero .mark{width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:0 auto 36px;border-radius:2px;}
+  .hero .mark{width:40px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:0 0 36px;border-radius:2px;}
   .hero .kicker{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:36px;}
-  .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,56px);line-height:1.32;letter-spacing:-.03em;color:var(--ink);word-break:keep-all;max-width:800px;margin:0 auto;}
+  .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,56px);line-height:1.32;letter-spacing:-.03em;color:var(--ink);word-break:keep-all;max-width:900px;margin:0;}
   .hero h1 .lead{display:block;font-family:var(--sans);font-size:clamp(14px,1.6vw,18px);font-weight:500;color:var(--ink-soft);letter-spacing:.01em;margin-bottom:22px;}
   .hero h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
   .hero .nm{margin-top:54px;font-family:var(--serif);font-size:34px;font-weight:800;letter-spacing:-.02em;}
   .hero .ro{display:inline-block;margin-top:16px;font-size:13px;letter-spacing:.12em;color:var(--ink-soft);font-weight:500;border:1px solid var(--line);border-radius:30px;padding:6px 18px;background:var(--bg-2);}
-
-  /* SECTION */
   .sec{padding:92px 0;border-top:1px solid var(--line);}
-  .sec-head{text-align:center;margin-bottom:60px;}
+  .sec-head{text-align:left;margin-bottom:56px;}
   .sec-head .en{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;}
   .sec-head .t{font-family:var(--serif);font-size:32px;font-weight:800;letter-spacing:-.025em;}
-  .sec-head .underline{width:30px;height:2px;background:var(--gold);margin:18px auto 0;border-radius:2px;}
-
-  /* INTRO */
-  .intro-body{max-width:720px;margin:0 auto;}
-  .intro-body p{font-family:var(--serif);font-size:16px;line-height:1.95;color:var(--ink-soft);margin-bottom:22px;letter-spacing:-.005em;font-weight:400;}
+  .sec-head .underline{width:30px;height:2px;background:var(--gold);margin:18px 0 0;border-radius:2px;}
+  .intro-body{max-width:none;margin:0;column-count:2;column-gap:56px;}
+  .intro-body p{font-family:var(--serif);font-size:16px;line-height:1.95;color:var(--ink-soft);margin-bottom:22px;letter-spacing:-.005em;font-weight:400;break-inside:avoid;}
   .intro-body p:last-child{margin-bottom:0;}
   .intro-body b{color:var(--accent);font-weight:600;}
   .intro-body .em{font-weight:700;color:var(--gold);}
-
-  /* CAREER */
-  .career{max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .career{max-width:none;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   .card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s;}
   .card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(59,91,219,.1);border-color:rgba(59,91,219,.4);}
   .card .yr{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:rgba(59,91,219,.08);padding:4px 12px;border-radius:20px;letter-spacing:.03em;}
   .card .ti{font-family:var(--serif);font-size:19px;font-weight:700;margin:14px 0 10px;}
   .card .de{font-size:14px;color:var(--ink-soft);line-height:1.8;}
-
-  /* PLAYIO */
-  .now{max-width:780px;margin:0 auto;background:linear-gradient(135deg,rgba(59,91,219,.05),var(--bg-2));border:1px solid var(--line);border-radius:22px;padding:50px 48px;}
-  .now .nm{font-family:var(--serif);font-size:30px;font-weight:800;text-align:center;}
+  .now{max-width:none;margin:0;background:linear-gradient(135deg,rgba(59,91,219,.05),var(--bg-2));border:1px solid var(--line);border-radius:22px;padding:54px 64px;}
+  .now .nm{font-family:var(--serif);font-size:30px;font-weight:800;text-align:left;}
   .now .slogan{display:block;font-size:14.5px;font-weight:400;color:var(--accent);margin-top:14px;letter-spacing:.01em;}
-  .now .div{width:30px;height:2px;background:var(--gold);margin:26px auto;border-radius:2px;}
-  .now p{font-size:15px;color:var(--ink-soft);line-height:1.95;max-width:640px;margin:0 auto;}
+  .now .div{width:30px;height:2px;background:var(--gold);margin:26px 0;border-radius:2px;}
+  .now p{font-size:15px;color:var(--ink-soft);line-height:1.95;max-width:760px;margin:0;}
   .now p b{color:var(--ink);font-weight:600;}
-  .now .feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;justify-content:center;}
+  .now .feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;justify-content:flex-start;}
   .now .feats span{font-size:12.5px;color:var(--ink-soft);border:1px solid var(--line);padding:8px 16px;border-radius:30px;background:var(--bg-2);transition:all .2s;}
   .now .feats span:hover{border-color:var(--accent);color:var(--accent);}
-
-  /* SERVICES */
-  .svc{max-width:820px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .svc{max-width:none;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   .svc-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .25s,box-shadow .25s;}
   .svc-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.06);}
   .svc-card .yr{font-size:12px;letter-spacing:.1em;color:var(--ink-dim);font-weight:600;}
@@ -111,9 +92,7 @@
   .svc-card .figs{display:flex;gap:28px;margin-top:18px;}
   .svc-card .v{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--accent);}
   .svc-card .k{font-size:11px;color:var(--ink-dim);margin-top:3px;}
-
-  /* INVEST */
-  .inv{max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .inv{max-width:none;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
   .inv-card{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:32px;}
   .inv-card h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:20px;font-weight:600;}
   .er,.ar{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);}
@@ -122,11 +101,13 @@
   .er .r{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--accent);}
   .er .r.m{font-size:13px;font-weight:400;color:var(--ink-dim);font-family:var(--sans);}
   .ar b{color:var(--ink);font-weight:600;font-size:14px;}
-
   footer{padding:56px 0;text-align:center;border-top:1px solid var(--line);}
   footer .mark{width:30px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:0 auto 22px;border-radius:2px;}
   footer .wrap{font-size:12.5px;color:var(--ink-dim);letter-spacing:.05em;}
-
+  @media(max-width:1080px){
+    .career,.svc{grid-template-columns:1fr 1fr;}
+    .intro-body{column-count:1;}
+  }
   @media(max-width:820px){
     .wrap{padding:0 24px;}
     .nav{padding:14px 24px;}
@@ -142,7 +123,6 @@
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="logo">CEO 프로필</div>
   <button class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -155,7 +135,6 @@
     <li><a href="#invest" onclick="document.getElementById('menu').classList.remove('open')">투자</a></li>
   </ul>
 </nav>
-
 <header class="hero" id="home">
   <div class="glow a"></div><div class="glow b"></div>
   <div class="wrap">
@@ -169,7 +148,6 @@
     <div class="ro">연쇄창업가 · 엔젤투자자</div>
   </div>
 </header>
-
 <section class="sec" id="profile">
   <div class="wrap">
     <div class="sec-head"><div class="en">Profile</div><div class="t">프로필</div><div class="underline"></div></div>
@@ -181,7 +159,6 @@
     </div>
   </div>
 </section>
-
 <section class="sec" id="career">
   <div class="wrap">
     <div class="sec-head"><div class="en">Career</div><div class="t">주요 경력</div><div class="underline"></div></div>
@@ -193,7 +170,6 @@
     </div>
   </div>
 </section>
-
 <section class="sec" id="now">
   <div class="wrap">
     <div class="sec-head"><div class="en">Playio</div><div class="t">현재 사업</div><div class="underline"></div></div>
@@ -210,7 +186,6 @@
     </div>
   </div>
 </section>
-
 <section class="sec" id="ventures">
   <div class="wrap">
     <div class="sec-head"><div class="en">Ventures</div><div class="t">주요 성공 사업</div><div class="underline"></div></div>
@@ -222,7 +197,6 @@
     </div>
   </div>
 </section>
-
 <section class="sec" id="invest">
   <div class="wrap">
     <div class="sec-head"><div class="en">Investments</div><div class="t">주요 투자 활동</div><div class="underline"></div></div>
@@ -244,11 +218,9 @@
     </div>
   </div>
 </section>
-
 <footer>
   <div class="mark"></div>
   <div class="wrap">최지웅 · 지엔에이컴퍼니 설립 &nbsp;|&nbsp; 지온네트웍스 · 모키 · 레디벅 · 플레이오</div>
 </footer>
-
 </body>
 </html>
